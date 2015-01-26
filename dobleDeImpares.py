@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Dados dos números enteros positivos a <= b, generar la lista de los 
+# dobles de todos los impares x tales que a <= x <= b.
+# 
+# Vamos, tomar los números impares entre a y b pero multiplicados por 
+# dos.
+
+# Por ejemplo, dados 2 y 11, deberá devolver [6, 10, 14, 18, 22].
+
+
 import unittest
 
 def esImpar(numero):
