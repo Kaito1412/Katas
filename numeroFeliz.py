@@ -9,12 +9,12 @@ def numero_feliz(num):
     feliz = False
     for x in range(0, 20):
         lista_num = lista_digitos(num)
-        num = suma_cuadrado(*lista_num)
+        num = suma_cuadrado(lista_num)
         if num == 1:
             feliz = True
     return feliz
 
-def suma_cuadrado(*nums):
+def suma_cuadrado(nums):
     suma = 0
     for num in nums:
         suma += num**2
@@ -36,7 +36,7 @@ class DoblesDeImparesTest(unittest.TestCase):
         self.assertFalse(numero_feliz(2))
 
     def test_devuelve_suma_cuadrados(self):
-        self.assertEqual(suma_cuadrado(*[4, 2]), 20)
+        self.assertEqual(suma_cuadrado([4, 2]), 20)
 
     def test_separa_digitos_en_lista(self):
         self.assertEqual(lista_digitos(19), [9, 1])
